@@ -65,8 +65,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a, b){
+  return a * b;
 }
 
 
@@ -154,9 +154,32 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+let computer = Math.random();
+if (computer <= 0.33) {
+  computer = 'rock';
+} else if (computer <= 0.67) {
+  computer = 'paper';
+} else if (computer > 0.67) {
+  computer = 'scissors;'
+}
+console.log('task 4 computer choice', computer);
 
-function game(user, computer){
-  /*add your code here*/
+function game(user, computer) {
+  if (user === computer) {
+    return `it's a tie`;
+  } else if (user === 'rock' && computer === 'scissors') {
+    return 'you win!';
+  } else if (user === 'paper' && computer === 'rock') {
+    return 'you win!';
+  } else if (user === 'scissors' && computer === 'paper') {
+    return 'you win!';
+  } else if (user === 'rock' && computer === 'paper') {
+    return 'you lose!';
+  } else if (computer === 'rock' && user === 'scissors') {
+    return 'you lose!';
+  } else if (computer === 'scissors' && user === 'paper') {
+    return 'you lose!';
+  }
 }
 
 
@@ -172,8 +195,8 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(number){
+  return number * 0.621371;
 }
 
 
@@ -186,8 +209,8 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(number){
+  return number / 30.48;
 }
 
 
@@ -202,8 +225,10 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(number){
+  for (let i = number; i > 1; i--){
+    return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i-1} bottles of soda on the wall`
+  }
 }
 
 
@@ -254,14 +279,14 @@ function foo(){
 }
 foo();
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-module.exports = {
-  foo,
-  multiply,
-  dogYears,
-  hungryDog,
-  game,
-  miles,
-  feet,
-  annoyingSong,
-  grade
-}
+  module.exports = {
+    foo,
+    multiply,
+    dogYears,
+    hungryDog,
+    game,
+    miles,
+    feet,
+    annoyingSong,
+    grade
+  }
