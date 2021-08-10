@@ -68,7 +68,7 @@ Do the following:
 function multiply(a, b){
   return a * b;
 }
-
+console.log('task 1d', multiply(3, 3));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -81,10 +81,10 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  return age * 7;
 }
-
+console.log('task 2', dogYears(6));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -198,7 +198,7 @@ Using the miles function below do the following:
 function miles(number){
   return number * 0.621371;
 }
-
+console.log('task 5a', miles(21));
 
 
 //Task 5b - Feet to CM
@@ -212,8 +212,7 @@ Using the feet function below do the following:
 function feet(number){
   return number / 30.48;
 }
-
-
+console.log("Task 5b", feet(1000));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -230,7 +229,7 @@ function annoyingSong(number){
     return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i-1} bottles of soda on the wall`
   }
 }
-
+console.log("task 6", annoyingSong(3));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -247,8 +246,18 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(num){
+  if (num >= 90) {
+    return 'you got an A';
+  } else if (num <= 89 && num >= 80) {
+    return 'you got a B';
+  } else if (num <= 79 && num >= 70) {
+    return 'you got a C';
+  }else if(num <= 69 && num >= 60) {
+   return 'you got a D'
+  } else if (num < 60) {
+    return 'you got an F';
+}
 }
 
 
